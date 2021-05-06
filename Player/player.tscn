@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player/nave-g.png" type="Texture" id=1]
+[ext_resource path="res://Player/player.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 31.8786, 10 )
+
+[node name="player" type="KinematicBody2D"]
+position = Vector2( 313.874, 398.658 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+speed = 4
+
+[node name="spr_player" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="cls_player" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}

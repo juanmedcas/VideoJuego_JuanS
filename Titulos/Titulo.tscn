@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Enviroment/MenuJ.jpg" type="Texture" id=1]
+[ext_resource path="res://Titulos/mn_titulo.tscn" type="PackedScene" id=2]
+
+[node name="Titulo" type="Node"]
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mrg_titulo" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu" type="VBoxContainer" parent="mrg_titulo"]
+margin_right = 730.0
+margin_bottom = 468.0
+
+[node name="mn_titulo" parent="mrg_titulo/menu" instance=ExtResource( 2 )]
+anchor_right = 0.0
+margin_right = 730.0
